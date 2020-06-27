@@ -1,0 +1,57 @@
+<html>
+<head>
+	<title>Moving Car</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<script>
+
+function run(interval, frames) {
+    var int = 1;
+    
+    function func() {
+        document.body.id = "b"+int;
+        int++;
+        if(int === frames) { int = 1; }
+    }
+    
+    var swap = window.setInterval(func, interval);
+}
+
+run(5000, 100); //milliseconds, frames
+
+</script>
+
+<body>
+
+	<div class="hero">
+		<div class="highway"></div>
+		<div class="city"></div>
+		
+		<div class="doggy">
+			<img src="doggy.png">
+		</div>
+
+		<div class="car">
+			<!--<img src="bus.png"> -->
+			<img src="car.png">
+		</div>
+		<div class="wheel">
+			<img src="wheel.png" class="front-wheel">
+			<img src="wheel.png" class="back-wheel"> 
+		</div>
+
+		<div class="owl">
+			<img src="owl.png">
+		</div>
+		
+		<div class="face">
+			<img src="face.png">
+		</div>
+		
+		<div class="flock">
+			<img src="flock.gif">
+		</div>
+
+	</div>
+</body>
+</html>
